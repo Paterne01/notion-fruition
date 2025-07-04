@@ -31,13 +31,8 @@ async function fetchAndApply(request) {
 
   let html = await response.text()
 
-  // Inject titre personnalisé (facultatif)
   html = html.replace(/<title>(.*?)<\/title>/, '<title>Bienvenue sur mon site ✨</title>')
-
-  // Masquer la barre Notion (facultatif)
-  html = html.replace('</head>', `<style>
-    div.notion-topbar { display: none !important; }
-  </style></head>`)
+  html = html.replace('</head>', `<style>div.notion-topbar { display: none !important; }</style></head>`)
 
   return new Response(html, {
     headers: {
