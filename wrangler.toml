@@ -1,0 +1,5 @@
+name = "notion-fruition"
+type = "javascript"
+account_id = "5b8f3348ff7be9eceebf07ed2f0a1ac3"
+workers_dev = true
+compatibility_date = "2025-07-04"
